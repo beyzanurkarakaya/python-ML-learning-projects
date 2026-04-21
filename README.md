@@ -1,1 +1,1 @@
-# python_ML_learning_projects
+# python-ML-learning-projects
