@@ -34,11 +34,19 @@ doğal dil işleme (NLP) ve istatistiksel yöntemlerle karşılaştırmalı olar
 - Post-hoc analiz ile ikili site karşılaştırmaları
 - Bonferroni düzeltmesi
 
+### 6. Duygu Analizi
+- Türkçe lexicon tabanlı duygu sözlüğü kullanılarak her haber başlığı 
+  Olumlu / Olumsuz / Nötr olarak sınıflandırıldı
+- Her sitenin genel duygu tonu yüzdesel olarak hesaplandı
+- Siteler arası duygu tonu karşılaştırması görselleştirildi
+- İnternet bağlantısı gerektirmeyen, tamamen lokal çalışan bir yöntem tercih edildi
+
 ## 📊 Temel Bulgular
 - Tüm siteler arasında istatistiksel olarak anlamlı gündem farkı tespit edildi (p < 0.05)
 - Hürriyet, diğer sitelerden en belirgin şekilde ayrışan site oldu
-- NTV, Cumhuriyet ve Posta birbirine benzer gündem öncelikleri izledi
+- NTV, Cumhuriyet ve Posta birbirine daha benzer gündem öncelikleri izledi
 - Posta en yüksek kelime çeşitliliği skoruna sahip (TTR: ~0.90)
+- Haber başlıklarının büyük çoğunluğu olumsuz veya nötr ton taşımaktadır
 
 ## 🛠️ Kullanılan Teknolojiler
 
@@ -53,13 +61,15 @@ doğal dil işleme (NLP) ve istatistiksel yöntemlerle karşılaştırmalı olar
 | `scipy` | Ki-kare testi |
 
 ## ⚙️ Kurulum
+
 ```bash
-git clone https://github.com/kullaniciadi/turkish-news-analysis.git
+git clone https://github.com/beyzanurkarakaya/turkish-news-analysis.git
 cd turkish-news-analysis
 pip install -r requirements.txt
 ```
 
 ## 🚀 Kullanım
+
 ```bash
 python turkish_news_analysis.py
 ```
@@ -71,12 +81,14 @@ Kod çalıştırıldığında sırasıyla şu görseller üretilir:
 4. TTR skoru bar chart
 5. Siteler arası kategori ısı haritası
 6. Post-hoc analiz ısı haritası
+7. Duygu analizi bar chart
 
 ## ⚠️ Notlar
 - Veriler her çalıştırmada anlık olarak çekilir, sonuçlar güne göre değişebilir
 - KMeans kümeleme rastgelelik içerdiğinden kategori dağılımları her çalıştırmada 
   küçük farklılıklar gösterebilir
 - SSL doğrulaması kapatılmıştır (verify=False), sadece lokal geliştirme amaçlıdır
+- Duygu analizi lexicon tabanlıdır, derin öğrenme modeli kullanılmamıştır
 
 ## 👤 Yazar
-GitHub: [@kullaniciadi](https://github.com/kullaniciadi)
+GitHub: [@beyzanurkarakaya](https://github.com/beyzanurkarakaya)
