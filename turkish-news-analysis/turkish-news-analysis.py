@@ -388,7 +388,6 @@ plt.show()
 
 # --- 16. POST-HOC ANALİZ ---
 from itertools import combinations
-from scipy.stats import chi2_contingency
 import numpy as np
 
 siteler = {
@@ -483,7 +482,6 @@ def duygu_skoru(df, site_adi):
 
     for baslik in df["baslik"]:
         baslik_lower = baslik.lower()
-        kelimeler = set(baslik_lower.split())
         
         ol_var = any(k in baslik_lower for k in olumlu_kelimeler)
         ols_var = any(k in baslik_lower for k in olumsuz_kelimeler)
